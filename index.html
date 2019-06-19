@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="./style.css">
+    <title>View real time financial data</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s3"><a href="#stock-price">STOCK PRICES</a></li>
+                    <li class="tab col s3"><a href="#active-stocks">MOST ACTIVE STOCKS</a></li>
+                    <li class="tab col s3"><a href="#gaining-stocks">MOST GAINING STOCKS</a></li>
+                    <li class="tab col s3"><a href="#losing-stocks">MOST LOSING STOCKS</a></li>
+                </ul>
+            </div>
+            <div id="stock-price" class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Stock Prices</span>
+                        <p>
+                            <table class="striped center center-align">
+                                <thead>
+                                    <tr class="center center-align">
+                                        <td>Symbol</td>
+                                        <td>Name</td>
+                                        <td>($)Price</td>
+                                    </tr>
+                                </thead>
+                                <tbody id="stockPrice"></tbody>
+                            </table>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="active-stocks" class="col s12">
+                <div class="card active-stocks">
+                    <div class="card-content">
+                        <span class="card-title">Most Actively Traded Stocks</span>
+                        <p>
+                            <table class="striped">
+                                <thead>
+                                    <tr>
+                                        <td>Company Name</td>
+                                        <td>Price</td>
+                                        <td>Changes</td>
+                                        <td>Changes Percentage</td>
+                                    </tr>
+                                </thead>
+                                <tbody id="activityList"></tbody>
+                            </table>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="gaining-stocks" class="col s12">
+                <div class="card gaining-stocks">
+                    <div class="card-content">
+                        <span class="card-title">Most Gaining Stocks</span>
+                        <p>
+                            <table class="striped">
+                                <thead>
+                                    <tr>
+                                        <td>Company Name</td>
+                                        <td>Price</td>
+                                        <td>Changes</td>
+                                        <td>Changes Percentage</td>
+                                    </tr>
+                                </thead>
+                                <tbody id="gaining-list"></tbody>
+                            </table>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="losing-stocks" class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Most Losing Stocks</span>
+                        <p>
+                            <table class="striped">
+                                <thead>
+                                    <tr>
+                                        <td>Company Name</td>
+                                        <td>Price</td>
+                                        <td>Changes</td>
+                                        <td>Changes Percentage</td>
+                                    </tr>
+                                </thead>
+                                <tbody id="losing-list"></tbody>
+                            </table>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./jquery.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./axios.js"></script>
+    <script src="./data.js"></script>
+</body>
+</html>
